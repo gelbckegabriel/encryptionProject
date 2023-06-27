@@ -1,0 +1,17 @@
+.button {
+  transition: 0.2s ease;
+}
+
+.button:hover {
+  transform: scale(1.001, 1.001);
+  transition: 0.2s ease;
+}
+
+.card {
+  transition: 0.5s ease;
+}
+
+.card:hover {
+  transform: scale(1.07, 1.07);
+  transition: 0.5s ease;
+}
