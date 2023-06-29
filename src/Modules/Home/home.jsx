@@ -1,13 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "bootstrap/dist/css/bootstrap.css";
 import Styles from "./style.module.scss";
 
 /* IMAGES */
-import HeroImage from "../../../public/Images/Cryptography-Hero.jpg";
-import GelbckeEncryption from "../../../public/Images/gelbcke_encryption.jpg";
-import Anagram from "../../../public/Images/anagram.png";
-import HashFunctions from "../../../public/Images/hash_functions.jpg";
+import HeroImage from "/Images/Cryptography-Hero.jpg";
+import GelbckeEncryption from "/Images/gelbcke_encryption.jpg";
+import Anagram from "/Images/anagram.png";
+import HashFunctions from "/Images/hash_functions.jpg";
 
 const Home = () => {
   return (

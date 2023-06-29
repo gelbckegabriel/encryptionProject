@@ -1,11 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "bootstrap/dist/css/bootstrap.css";
+import CryptographyCarousel from "../../Components/CryptographyCarousel/CryptographyCarousel";
+import Carousel from '../../Components/CryptographyCarousel/CryptographyCarousel'
 
 const EncryptList = () => {
   return (
     <>
-      <h1>TEST</h1>
+      <CryptographyCarousel />
     </>
   );
 };
