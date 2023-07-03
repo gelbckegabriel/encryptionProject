@@ -1,7 +1,20 @@
-textInput = ''
+from flask import Flask, render_template, request
+app = Flask(__name__)
 
+import jyserver.Flask as jsf
+@jsf.use(app)
+class App:
+    def ___init___(self):
+        self.count = 0
+    def increment(self):
+        self.count += 1
+        self.js.document.getElementById('count').innerHTML = self.count
 
-def encrypt_this(text):
+@app.route('/')
+def index_page():
+    return App.render(render_template('flask-simple.html'))
+
+""" def encrypt_this(text):
     
     splitted = text.split()
     new_phrase = []
@@ -29,6 +42,4 @@ def encrypt_this(text):
 
     print(' '.join(new_phrase))
     return ' '.join(new_phrase)
-
-
-encrypt_this(textInput)
+ """
