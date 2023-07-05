@@ -3,7 +3,9 @@ import React from "react";
 const New = () => {
   return (
     <>
-      <h1>TEST</h1>
+      <div className="container">
+        <h1>TEST</h1>
+      </div>
     </>
   );
 };

@@ -7,6 +7,7 @@ import Home from "../Modules/Home/home.jsx";
 /* ENCRYPT LIST */
 import EncryptList from "../Modules/Encrypt/encryptList.jsx";
 import GelbckeEncryption from "../Modules/Encrypt/GelbckeEncryption/gelbckeEncryption";
+import Anagram from "../Modules/Encrypt/Anagram/anagram";
 
 export default createRoutesFromElements(
   <Route exact path="/" element={<BaseLayout />}>
@@ -15,5 +16,6 @@ export default createRoutesFromElements(
     {/* Encryption */}
     <Route index path="/encryptlist" element={<EncryptList />} />
     <Route index path="/gelbckeencryption" element={<GelbckeEncryption />} />
+    <Route index path="/anagram" element={<Anagram />} />
   </Route>
 );

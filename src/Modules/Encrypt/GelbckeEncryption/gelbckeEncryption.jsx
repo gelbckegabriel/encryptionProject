@@ -51,11 +51,11 @@ const GelbckeEncryption = () => {
 
   return (
     <>
-      <div class="container">
+      <div className="container">
         <br />
 
         <textarea
-          class="mx-5"
+          className="mx-5"
           name="input"
           id="input"
           cols="30"
@@ -74,7 +74,7 @@ const GelbckeEncryption = () => {
         <button
           type="button"
           id="buttonTest"
-          class="btn btn-primary"
+          className="btn btn-primary"
           onClick={() => convertToEncryption()}
         >
           TEST
@@ -82,24 +82,24 @@ const GelbckeEncryption = () => {
       </div>
 
       <div
-        class="modal modal-sheet position-static d-block bg-body-secondary p-3 py-md-3"
+        className="modal modal-sheet position-static d-block bg-body-secondary p-3 py-md-3"
         tabIndex="-1"
         role="dialog"
         id="modalChoice"
       >
-        <div class="modal-dialog" id="modal" role="document">
-          <div class="modal-content rounded-3 shadow">
-            <div class="modal-body p-4 text-center">
-              <h5 class="mb-0">
+        <div className="modal-dialog" id="modal" role="document">
+          <div className="modal-content rounded-3 shadow">
+            <div className="modal-body p-4 text-center">
+              <h5 className="mb-0">
                 <strong>Alert</strong>
               </h5>
               <br />
-              <p class="mb-0">Please insert your text in the input field!</p>
+              <p className="mb-0">Please insert your text in the input field!</p>
             </div>
-            <div class="modal-footer flex-nowrap p-0">
+            <div className="modal-footer flex-nowrap p-0">
               <button
                 type="button"
-                class="btn btn-lg btn-link fs-6 text-decoration-none col-12 py-3 m-0 rounded-0 border-end"
+                className="btn btn-lg btn-link fs-6 text-decoration-none col-12 py-3 m-0 rounded-0 border-end"
                 onClick={() => hideModal()}
               >
                 <strong>Close</strong>
