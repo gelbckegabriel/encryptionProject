@@ -1,6 +1,10 @@
 import React from "react";
 
 const Anagram = () => {
+  function randomNumber(min, max) {
+    return Math.floor(Math.random() * (max - min) + min);
+  }
+
   function calculateAnagramPossibilities() {
     let word = document.getElementById("input").value;
 
@@ -78,9 +82,28 @@ const Anagram = () => {
 
   function convertToAnagram() {
     let text = document.getElementById("inputText").value;
-    let splitted = text.split("");
+    let splitted = text.split(" ");
+    let word = [];
+    let convertedText = [];
 
-    document.getElementById("outputText").value = newText;
+    for (let i = 0; i < splitted.length; i++) {
+      word = splitted[i];
+      word = word.split("")
+
+      if (word.length > 1) {
+        word.sort(function() {
+          return 0.5 - Math.random()
+        })
+        word = word.join("")
+        convertedText.push(word)
+      } else {
+        convertedText.push(word[0])
+      }
+    }
+
+    convertedText = convertedText.join(" ")
+    
+    document.getElementById("outputText").value = convertedText;
   }
 
   return (

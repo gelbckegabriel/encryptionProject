@@ -12,7 +12,7 @@ const Home = () => {
   return (
     <>
       {/* MAIN HERO CARD */}
-      <div className="container col-xxl-8 px-4 py-5">
+      <div className="container col-xxl-8 px-4 py-2">
         <div className="row flex-lg-row-reverse align-items-center g-5 py-5">
           <div className="col-10 col-sm-8 col-lg-6">
             <img
@@ -61,56 +61,6 @@ const Home = () => {
                 </button>
               </a>
             </div>
-          </div>
-        </div>
-      </div>
-
-      {/* FEATURES */}
-      <div className="container px-4 py-5" id="custom-cards">
-        <h2 className="pb-2 border-bottom">Summary of cryptographic algorithms</h2>
-
-        <div className="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
-          <div className={`col ${Styles.card}`}>
-            <Link to="/gelbckeencryption">
-              <div
-                className="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg"
-                style={{ backgroundImage: `url(${GelbckeEncryption})` }}
-              >
-                <div className="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
-                  <h3 className="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">
-                    Gelbcke's Encryption
-                  </h3>
-                </div>
-              </div>
-            </Link>
-          </div>
-
-          <div className={`col ${Styles.card}`}>
-            <Link to="/">
-              <div
-                className="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg"
-                style={{ backgroundImage: `url(${Anagram})` }}
-              >
-                <div className="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
-                  <h3 className="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Anagram</h3>
-                </div>
-              </div>
-            </Link>
-          </div>
-
-          <div className={`col ${Styles.card}`}>
-            <Link to="/">
-              <div
-                className="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg"
-                style={{ backgroundImage: `url(${HashFunctions})` }}
-              >
-                <div className="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
-                  <h3 className="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">
-                    Hash functions
-                  </h3>
-                </div>
-              </div>
-            </Link>
           </div>
         </div>
       </div>

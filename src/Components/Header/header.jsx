@@ -23,7 +23,7 @@ const Header = () => {
               </a>
 
               <ul className="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">
-                <li>
+                <li className={Styles.button}>
                   <Link to="/" style={{ textDecoration: "none" }}>
                     <span className="nav-link text-white">
                       <svg
@@ -41,7 +41,7 @@ const Header = () => {
                   </Link>
                 </li>
 
-                <li>
+                <li className={Styles.button}>
                   <Link to="/encryptlist" style={{ textDecoration: "none" }}>
                     <span className="nav-link text-white">
                       <svg
@@ -59,7 +59,7 @@ const Header = () => {
                   </Link>
                 </li>
 
-                <li>
+                <li className={Styles.button}>
                   <a
                     href="https://github.com/gelbckegabriel"
                     className="nav-link text-white"
@@ -78,7 +78,7 @@ const Header = () => {
                     GitHub
                   </a>
                 </li>
-                <li>
+                <li className={Styles.button}>
                   <a
                     href="https://www.linkedin.com/in/gabriel-gelbcke-874930159/"
                     className="nav-link text-white"
@@ -97,7 +97,7 @@ const Header = () => {
                     LinkedIn
                   </a>
                 </li>
-                <li>
+                <li className={Styles.button}>
                   <span href="#" className="nav-link text-white">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
