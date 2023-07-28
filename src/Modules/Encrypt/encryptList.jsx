@@ -5,143 +5,75 @@ import Styles from "./style.module.scss";
 
 const EncryptList = () => {
 
-let cardsInfo = [
-  {
-    redirect: '',
-    image: '',
-    category: '',
-    title: '',
-    subtitle: '',
-    description: '',
-    footerTime: '',
-    footerComments: ''
-  },
-  {
-    redirect: '',
-    image: '',
-    category: '',
-    title: '',
-    subtitle: '',
-    description: '',
-    footerTime: '',
-    footerComments: ''
-  },
-]
+  let cardsInfo = [
+    {
+      redirect: "/symmetric",
+      image: "/Images/CryptographyImage.jpg",
+      category: "Cryptography",
+      title: "Symmetric Key Alg.",
+      subtitle: "Message encryption",
+      description:
+        "Symmetric key algorithms are algorithms for cryptography that use the same cryptographic key for plaintext encryption and ciphertext decryption.",
+      footerTime: "135 min",
+      footerComments: "0 comments",
+    },
+    {
+      redirect: "/anagram",
+      image: "/Images/AnagramImage.png",
+      category: "Anagram",
+      title: "Anagram",
+      subtitle: "Words shuffle",
+      description:
+        "Anagram is a kind of wordplay created by rearranging the letters of a word or phrase to produce other words or phrases, in this case, it will be random. Some examples are Iracema | America and Love | Rome.",
+      footerTime: "70 min",
+      footerComments: "0 comments",
+    },
+    {
+      redirect: "/gelbckeencryption",
+      image: "/Images/GelbckeEnctyption.jpg",
+      category: "Personal",
+      title: "Gelbcke's Encryption",
+      subtitle: "My own encryption method",
+      description:
+        "The idea of this encryption is to get the first letter of a word and convert to the UniCode value, and then swap the second letter with the last letter of the same word.",
+      footerTime: "50 min",
+      footerComments: "0 comments",
+    },
+  ];
 
   return (
     <>
-
-<div style={{ position: "relative", margin: "500px", marginTop: "50px" }}>
-        <ul>
-          {cardsInfo.map((row) ())}
-        </ul>
-      </div>
-
       <div style={{ position: "relative", margin: "500px", marginTop: "50px" }}>
         <ul>
-          <li className={Styles.card}>
-            <header className={Styles.card__thumb}>
-              <Link to="/symmetric">
-                <img
-                  src="../../../public/Images/CryptographyImage.jpg"
-                  style={{ objectFit: "cover" }}
-                />
+          {cardsInfo.map((row) => (
+            <li className={Styles.card}>
+              <header className={Styles.card__thumb}>
+                <Link to={row.redirect}>
+                  <img src={row.image} style={{ objectFit: "cover" }} />
+                </Link>
+                <div className={Styles.card__category}>
+                  <a href="#">{row.category}</a>
+                </div>
+              </header>
+              <Link to={row.redirect}>
+                <div className={Styles.card__body}>
+                  <div className={Styles.card__title}>
+                    <span>{row.title}</span>
+                  </div>
+                  <div className={Styles.card__subtitle}>{row.subtitle}</div>
+                  <p className={Styles.card__description}>{row.description}</p>
+                </div>
               </Link>
-              <div className={Styles.card__category}>
-                <a href="#">Cryptography</a>
-              </div>
-            </header>
-            <Link to="/symmetric">
-              <div className={Styles.card__body}>
-                <div className={Styles.card__title}>
-                  <span>Symmetric Key Algorithm</span>
-                </div>
-                <div className={Styles.card__subtitle}>
-                  Message encryption
-                </div>
-                <p className={Styles.card__description}>
-                  Symmetric key algorithms are algorithms for cryptography that
-                  use the same cryptographic key for plaintext encryption and
-                  ciphertext decryption.
-                </p>
-              </div>
-            </Link>
-            <footer className={Styles.card__footer}>
-              <span className={`${Styles.icon} ${Styles.icon_time}`}>
-                50 min
-              </span>
-              <span className={`${Styles.icon} ${Styles.icon_comment}`}>
-                <a href="#">0 comments</a>
-              </span>
-            </footer>
-          </li>
-          <li className={Styles.card}>
-            <header className={Styles.card__thumb}>
-              <Link to="/anagram">
-                <img src="../../../public/Images/AnagramImage.png" />
-              </Link>
-              <div className={Styles.card__category}>
-                <a href="#">Anagram</a>
-              </div>
-            </header>
-            <Link to="/anagram">
-              <div className={Styles.card__body}>
-                <div className={Styles.card__title}>
-                  <span>Anagram</span>
-                </div>
-                <div className={Styles.card__subtitle}>
-                  Words shuffle
-                </div>
-                <p className={Styles.card__description}>
-                  Anagram is a kind of wordplay created by rearranging the
-                  letters of a word or phrase to produce other words or phrases,
-                  in this case, it will be random. Some examples are Iracema |
-                  America and Love | Rome.
-                </p>
-              </div>
-            </Link>
-            <footer className={Styles.card__footer}>
-              <span className={`${Styles.icon} ${Styles.icon_time}`}>
-                50 min
-              </span>
-              <span className={`${Styles.icon} ${Styles.icon_comment}`}>
-                <a href="#">0 comments</a>
-              </span>
-            </footer>
-          </li>
-          <li className={Styles.card}>
-            <header className={Styles.card__thumb}>
-              <Link to="/gelbckeencryption">
-                <img src="../../../public/Images/GelbckeEnctyption.jpg" />
-              </Link>
-              <div className={Styles.card__category}>
-                <Link to="/gelbckeencryption">Personal</Link>
-              </div>
-            </header>
-            <Link to="/gelbckeencryption">
-              <div className={Styles.card__body}>
-                <div className={Styles.card__title}>
-                  <span>Gelbcke's Encryption</span>
-                </div>
-                <div className={Styles.card__subtitle}>
-                  My own encryption method
-                </div>
-                <p className={Styles.card__description}>
-                  The idea of this encryption is to get the first letter of a
-                  word and convert to the UniCode value, and then swap the
-                  second letter with the last letter of the same word.
-                </p>
-              </div>
-            </Link>
-            <footer className={Styles.card__footer}>
-              <span className={`${Styles.icon} ${Styles.icon_time}`}>
-                50 min
-              </span>
-              <span className={`${Styles.icon} ${Styles.icon_comment}`}>
-                <a href="#">0 comments</a>
-              </span>
-            </footer>
-          </li>
+              <footer className={Styles.card__footer}>
+                <span className={`${Styles.icon} ${Styles.icon_time}`} style={{ paddingLeft: '5px' }}>
+                  {row.footerTime}
+                </span>
+                {/* <span className={`${Styles.icon} ${Styles.icon_comment}`}>
+                  <a href="#">{row.footerComments}</a>
+                </span> */}
+              </footer>
+            </li>
+          ))}
         </ul>
       </div>
 
