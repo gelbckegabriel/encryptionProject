@@ -52,7 +52,7 @@ const Home = () => {
                   Access Library
                 </button>
               </Link>
-              <a href="mailto:gabrielgelbcke@gmail.com">
+              <a href="https://www.linkedin.com/in/gabriel-gelbcke-874930159/" target="_blank">
                 <button
                   className={`btn btn-outline-secondary btn-lg px-4 ${Styles.button}`}
                   type="button"

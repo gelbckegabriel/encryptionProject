@@ -4,13 +4,44 @@ import CryptographyCarousel from "../../Components/CryptographyCarousel/Cryptogr
 import Styles from "./style.module.scss";
 
 const EncryptList = () => {
+
+let cardsInfo = [
+  {
+    redirect: '',
+    image: '',
+    category: '',
+    title: '',
+    subtitle: '',
+    description: '',
+    footerTime: '',
+    footerComments: ''
+  },
+  {
+    redirect: '',
+    image: '',
+    category: '',
+    title: '',
+    subtitle: '',
+    description: '',
+    footerTime: '',
+    footerComments: ''
+  },
+]
+
   return (
     <>
+
+<div style={{ position: "relative", margin: "500px", marginTop: "50px" }}>
+        <ul>
+          {cardsInfo.map((row) ())}
+        </ul>
+      </div>
+
       <div style={{ position: "relative", margin: "500px", marginTop: "50px" }}>
         <ul>
           <li className={Styles.card}>
             <header className={Styles.card__thumb}>
-              <Link to="/">
+              <Link to="/symmetric">
                 <img
                   src="../../../public/Images/CryptographyImage.jpg"
                   style={{ objectFit: "cover" }}
@@ -20,7 +51,7 @@ const EncryptList = () => {
                 <a href="#">Cryptography</a>
               </div>
             </header>
-            <Link to="/">
+            <Link to="/symmetric">
               <div className={Styles.card__body}>
                 <div className={Styles.card__title}>
                   <span>Symmetric Key Algorithm</span>
