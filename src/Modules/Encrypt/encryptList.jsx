@@ -4,16 +4,15 @@ import CryptographyCarousel from "../../Components/CryptographyCarousel/Cryptogr
 import Styles from "./style.module.scss";
 
 const EncryptList = () => {
-
   let cardsInfo = [
     {
       redirect: "/symmetric",
       image: "/Images/CryptographyImage.jpg",
-      category: "Cryptography",
-      title: "Symmetric Key Alg.",
+      category: "Traditional",
+      title: "Symmetric Cipher",
       subtitle: "Message encryption",
       description:
-        "Symmetric key algorithms are algorithms for cryptography that use the same cryptographic key for plaintext encryption and ciphertext decryption.",
+        "This traditional symmetric encryption uses a decryption key that is used for encrypting and also for decrypting the message, the text conversion is made with Cesar's Cypher.",
       footerTime: "135 min",
       footerComments: "0 comments",
     },
@@ -65,7 +64,10 @@ const EncryptList = () => {
                 </div>
               </Link>
               <footer className={Styles.card__footer}>
-                <span className={`${Styles.icon} ${Styles.icon_time}`} style={{ paddingLeft: '5px' }}>
+                <span
+                  className={`${Styles.icon} ${Styles.icon_time}`}
+                  style={{ paddingLeft: "5px" }}
+                >
                   {row.footerTime}
                 </span>
                 {/* <span className={`${Styles.icon} ${Styles.icon_comment}`}>
