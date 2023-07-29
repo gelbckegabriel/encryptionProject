@@ -1,9 +1,20 @@
-import React, { useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef } from "react";
+import { Modal } from "react-bootstrap";
 import Styles from "./style.module.scss";
 
 const GelbckeEncryption = () => {
   const buttonContainerRef = useRef(null);
   const howDoesItWorkButtonRef = useRef(null);
+  const [showModal, setShowModal] = useState(false);
+
+  const handleOpenModal = () => {
+    console.log("open");
+    setShowModal(true);
+  };
+
+  const handleCloseModal = () => {
+    setShowModal(false);
+  };
 
   useEffect(() => {
     // Obtém o width do contêiner dos botões Encrypt e Decrypt
@@ -129,6 +140,7 @@ const GelbckeEncryption = () => {
             ref={howDoesItWorkButtonRef}
             className={Styles.styledButtonQuestion}
             style={{ marginLeft: "5px" }}
+            onClick={() => handleOpenModal()}
           >
             How does it work?
           </button>
@@ -178,6 +190,44 @@ const GelbckeEncryption = () => {
             </button>
           </span>
         </div>
+
+        <Modal
+          className={Styles.modal}
+          show={showModal}
+          onHide={handleCloseModal}
+          centered
+        >
+          <Modal.Header className={Styles.customModalHeader} closeButton>
+            <Modal.Title>Encryption Method</Modal.Title>
+          </Modal.Header>
+          <Modal.Body className={Styles.customModalBody}>
+            <p>
+              This encryption will convert the first letter of your word to a
+              unicode and then swap the second letter to the last letter of your
+              word.
+            </p>
+            <br />
+            What is an example for this method?
+            <br />
+            <ul>
+              <li>'Gabriel'</li>
+              <ul>
+                <li>Unicode for 'G' = '71'</li>
+                <li>
+                  Second letter ('a') will be swapped with the last letter ('l')
+                </li>
+                <li>'Gabriel' = '71lbriea'</li>
+              </ul>
+            </ul>
+          </Modal.Body>
+          <Modal.Footer>
+            <p>
+              Message for encryption on the left.
+              <br />
+              Message for decryption on the right.
+            </p>
+          </Modal.Footer>
+        </Modal>
       </div>
     </>
   );
