@@ -31,7 +31,8 @@ textarea:focus {
 }
 
 .styledButton,
-.styledButtonDecrypt {
+.styledButtonDecrypt,
+.styledButtonQuestion {
   padding: 10px 20px;
   border: none;
   border-radius: 20px;
@@ -44,17 +45,27 @@ textarea:focus {
 }
 
 .styledButton:hover {
-  background-color: #0d8beb;
+  background-color: #1c79c0;
   transform: scale(1.06);
   transition: ease 0.4s;
 }
 
 .styledButtonDecrypt {
-  background-color: #EF9A9A;
+  background-color: #ef9a9a;
 }
 
 .styledButtonDecrypt:hover {
-  background-color: #D32F2F;
+  background-color: #d32f2f;
+  transform: scale(1.06);
+  transition: ease 0.4s;
+}
+
+.styledButtonQuestion {
+  background-color: #cccccc;
+}
+
+.styledButtonQuestion:hover {
+  background-color: #a0a0a0;
   transform: scale(1.06);
   transition: ease 0.4s;
 }
