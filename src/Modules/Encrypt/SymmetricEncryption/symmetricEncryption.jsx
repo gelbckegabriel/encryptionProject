@@ -66,7 +66,7 @@ const Symmetric = () => {
       document.getElementById("key").value = "";
       window.alert("Please insert a number in the key field!");
     } else {
-      if (key > 25) {
+      if (key <= 0 || key > 25) {
         document.getElementById("key").value = "";
         window.alert(
           "Please insert a number between '1' and '25' in the key field!"
