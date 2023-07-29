@@ -1,4 +1,5 @@
 import React from "react";
+import Styles from "./style.module.scss";
 
 const Anagram = () => {
   function randomNumber(min, max) {
@@ -81,29 +82,29 @@ const Anagram = () => {
   }
 
   function convertToAnagram() {
-    let text = document.getElementById("inputText").value;
+    let text = document.getElementById("input").value;
     let splitted = text.split(" ");
     let word = [];
     let convertedText = [];
 
     for (let i = 0; i < splitted.length; i++) {
       word = splitted[i];
-      word = word.split("")
+      word = word.split("");
 
       if (word.length > 1) {
-        word.sort(function() {
-          return 0.5 - Math.random()
-        })
-        word = word.join("")
-        convertedText.push(word)
+        word.sort(function () {
+          return 0.5 - Math.random();
+        });
+        word = word.join("");
+        convertedText.push(word);
       } else {
-        convertedText.push(word[0])
+        convertedText.push(word[0]);
       }
     }
 
-    convertedText = convertedText.join(" ")
-    
-    document.getElementById("outputText").value = convertedText;
+    convertedText = convertedText.join(" ");
+
+    document.getElementById("result").value = convertedText;
   }
 
   return (
@@ -119,45 +120,54 @@ const Anagram = () => {
               id="input"
               placeholder="Type a single word..."
             />
-            <button onClick={() => calculateAnagramPossibilities()}>
+            <button
+              style={{ marginLeft: "5px" }}
+              className={Styles.styledButton}
+              onClick={() => calculateAnagramPossibilities()}
+            >
               Calculate
             </button>
           </div>
 
-          <p>
-            There are <strong id="possibleAmount">*</strong> possible anagrams
-            for the word "<strong id="word"> </strong>" !
-          </p>
+          <div>
+            <p>
+              There are <strong id="possibleAmount">*</strong> possible anagrams
+              for the word "<strong id="word"> </strong>" !
+            </p>
+          </div>
         </div>
 
         <br />
+
+        <div style={{ display: "flex", justifyContent: "center" }}>
+          <textarea
+            name="input"
+            id="input"
+            cols="30"
+            rows="5"
+            placeholder="Decrypted Message..."
+          ></textarea>
+
+          <textarea
+            name="result"
+            id="result"
+            cols="30"
+            rows="5"
+            placeholder="Encrypted Message..."
+            style={{ marginLeft: "5px" }}
+          ></textarea>
+        </div>
+
         <br />
 
-        <div>
-          <textarea
-            className="mx-5"
-            name="inputText"
-            id="inputText"
-            cols="30"
-            rows="5"
-            placeholder="INPUT"
-          ></textarea>
-
-          <textarea
-            name="outputText"
-            id="outputText"
-            cols="30"
-            rows="5"
-            placeholder="RESULT"
-          ></textarea>
-
+        <div style={{ display: "flex", justifyContent: "center" }}>
           <button
             type="button"
             id="buttonTest"
-            className="btn btn-primary"
+            className={Styles.styledButton}
             onClick={() => convertToAnagram()}
           >
-            TEST
+            Encrypt
           </button>
         </div>
       </div>

@@ -1,17 +1,7 @@
 import React, { useEffect } from "react";
+import Styles from "./style.module.scss";
 
 const GelbckeEncryption = () => {
-  useEffect(() => {
-    function hideModal() {
-      document.getElementById("modal").style.display = "none";
-    }
-    hideModal();
-  });
-
-  function hideModal() {
-    document.getElementById("modal").style.display = "none";
-  }
-
   function convertToEncryption() {
     let text = document.getElementById("input").value;
 
@@ -54,58 +44,45 @@ const GelbckeEncryption = () => {
       <div className="container">
         <br />
 
-        <textarea
-          className="mx-5"
-          name="input"
-          id="input"
-          cols="30"
-          rows="5"
-          placeholder="INPUT"
-        ></textarea>
+        <div style={{ display: "flex", justifyContent: "center" }}>
+          <textarea
+            name="input"
+            id="input"
+            cols="30"
+            rows="5"
+            placeholder="Decrypted Message..."
+          ></textarea>
 
-        <textarea
-          name="result"
-          id="result"
-          cols="30"
-          rows="5"
-          placeholder="RESULT"
-        ></textarea>
+          <textarea
+            name="result"
+            id="result"
+            cols="30"
+            rows="5"
+            placeholder="Encrypted Message..."
+            style={{ marginLeft: "5px" }}
+          ></textarea>
+        </div>
 
-        <button
-          type="button"
-          id="buttonTest"
-          className="btn btn-primary"
-          onClick={() => convertToEncryption()}
-        >
-          TEST
-        </button>
-      </div>
+        <br />
 
-      <div
-        className="modal modal-sheet position-static d-block bg-body-secondary p-3 py-md-3"
-        tabIndex="-1"
-        role="dialog"
-        id="modalChoice"
-      >
-        <div className="modal-dialog" id="modal" role="document">
-          <div className="modal-content rounded-3 shadow">
-            <div className="modal-body p-4 text-center">
-              <h5 className="mb-0">
-                <strong>Alert</strong>
-              </h5>
-              <br />
-              <p className="mb-0">Please insert your text in the input field!</p>
-            </div>
-            <div className="modal-footer flex-nowrap p-0">
-              <button
-                type="button"
-                className="btn btn-lg btn-link fs-6 text-decoration-none col-12 py-3 m-0 rounded-0 border-end"
-                onClick={() => hideModal()}
-              >
-                <strong>Close</strong>
-              </button>
-            </div>
-          </div>
+        <div style={{ display: "flex", justifyContent: "center" }}>
+          <button
+            type="button"
+            id="buttonTest"
+            className={Styles.styledButton}
+            onClick={() => convertToEncryption()}
+          >
+            Encrypt
+          </button>
+          <button
+            type="button"
+            id="buttonTest"
+            className={Styles.styledButtonDecrypt}
+            style={{ marginLeft: "5px" }}
+            onClick={() => convertToEncryption()}
+          >
+            Decrypt
+          </button>
         </div>
       </div>
     </>
