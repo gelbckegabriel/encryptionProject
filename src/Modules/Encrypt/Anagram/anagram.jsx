@@ -82,7 +82,7 @@ const Anagram = () => {
   }
 
   function convertToAnagram() {
-    let text = document.getElementById("input").value;
+    let text = document.getElementById("inputMessage").value;
     let splitted = text.split(" ");
     let word = [];
     let convertedText = [];
@@ -141,8 +141,8 @@ const Anagram = () => {
 
         <div style={{ display: "flex", justifyContent: "center" }}>
           <textarea
-            name="input"
-            id="input"
+            name="inputMessage"
+            id="inputMessage"
             cols="30"
             rows="5"
             placeholder="Decrypted Message..."

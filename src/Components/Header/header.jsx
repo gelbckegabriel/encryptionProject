@@ -97,6 +97,7 @@ const Header = () => {
                     LinkedIn
                   </a>
                 </li>
+                {/*  
                 <li className={Styles.button}>
                   <span href="#" className="nav-link text-white">
                     <svg
@@ -112,6 +113,7 @@ const Header = () => {
                     Language
                   </span>
                 </li>
+                */}
               </ul>
             </div>
           </div>
