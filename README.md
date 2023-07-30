@@ -22,7 +22,7 @@
   <p>Clone this Repo:</p>
 
   ```
-  git clone https://github.com/ExxonMobil/MDL_KnowledgeCenter.git
+  git clone https://github.com/gelbckegabriel/encryptionProject.git
   ```
 
   <p>Install dependencies:</p>
@@ -42,7 +42,7 @@
   npm run dev
   ```   
 
-  <li>Build for Production (deployment of SharePoint)</li>
+  <li>Build for Production (deployment)</li>
 
   ```
   npm run build
