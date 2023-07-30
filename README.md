@@ -48,6 +48,7 @@
   npm run build
   ```
   </ul>
+  
 </div>
 
 <br />
@@ -57,3 +58,10 @@
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
+<br />
+<hr />
+<br />
+
+  ### VIDEO DEMONSTRATION:
+  https://github.com/gelbckegabriel/encryptionProject/assets/106601261/69f83e05-d336-4ec6-9a13-3563ee81a96e
